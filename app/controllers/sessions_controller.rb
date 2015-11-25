@@ -12,6 +12,7 @@ class SessionsController < ApplicationController
         forget(user)
       end
       flash[:success] = t "login_susscesful"
+      params[:session][:remember_me] == "1" ? remember(user) : forget(user)
       redirect_to user
     else
       flash[:danger] = t "invalid"
