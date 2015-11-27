@@ -35,3 +35,8 @@ en:
   error: "error"
   contain: "The form contains"
   setting: "Settings"
+  admin_category: "Categories"
+  admin_word: "Words"
+  admin_all_users: "All users"
+  categories_title: "Categories#new"
+  categories_p: "Find me in app/views/categories/new.html.erb"
