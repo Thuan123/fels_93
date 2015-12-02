@@ -4,7 +4,11 @@
   <div class="content container">
     <div class="row exam">
       <div class="col-md-10 col-md-offset-1">
-        <h3><%= t "categories_list" %></h3>
+        <div>
+          <h3><%= t "categories_list" %></h3>
+          <%= link_to t("categories_new"), new_admin_category_path , class: "btn btn-success button" %>
+        </div>
+        <br>
         <table class="table table-bordered">
           <thead>
             <tr>

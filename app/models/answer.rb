@@ -1,5 +1,5 @@
 class Answer < ActiveRecord::Base
-  has_many :words
-
+  belongs_to :word
   validates :content, presence: true
+  validates :correct, presence: true
 end
