@@ -11,10 +11,8 @@
     <div class="col-md-8">
       <div class="form-group">
         <div class="col-lg-10 center">
-          <% if !admin_check? %>
-            <%= link_to t("admin_category"), categories_path , class: "btn btn-lg btn-primary" %>
-            <%= link_to t("word_list"), words_path , class: "btn btn-lg btn-primary" %>
-          <% end %>
+          <%= link_to t("admin_category"), categories_path , class: "btn btn-lg btn-primary" %>
+          <%= link_to t("word_list"), words_path , class: "btn btn-lg btn-primary" %>
         </div>
       </div>
     </div>
