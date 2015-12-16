@@ -68,7 +68,11 @@ module SessionsHelper
     session[:forwarding_url] = request.url if request.get?
   end
 
-  def get_category category_id
-    Category.find_by id: category_id
+  def get_activity type_id, target_id
+    if type_id == Settings.activity_type.lesson
+      Category.find_by id: target_id
+    else
+      User.find_by id: target_id
+    end
   end
 end

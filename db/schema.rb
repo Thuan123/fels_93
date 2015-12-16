@@ -15,9 +15,11 @@ ActiveRecord::Schema.define(version: 20151126182526) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "target_id"
+    t.string   "target_type"
+    t.integer  "type_id"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   add_index "activities", ["user_id"], name: "index_activities_on_user_id"
@@ -41,6 +43,7 @@ ActiveRecord::Schema.define(version: 20151126182526) do
 
   create_table "lessons", force: :cascade do |t|
     t.string   "content"
+    t.integer  "count_true"
     t.integer  "user_id"
     t.integer  "category_id"
     t.datetime "created_at",  null: false

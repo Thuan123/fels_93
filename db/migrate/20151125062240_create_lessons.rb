@@ -2,6 +2,7 @@ class CreateLessons < ActiveRecord::Migration
   def change
     create_table :lessons do |t|
       t.string :content
+      t.integer :count_true
       t.references :user, index: true, foreign_key: true
       t.references :category, index: true, foreign_key: true
 

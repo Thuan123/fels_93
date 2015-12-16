@@ -4,3 +4,10 @@ word_learned: "learned"
 word_notlearned: "notlearned"
 number_answer: 4
 words_per_lesson: 10
+activity_type:
+  create: "Take a lesson"
+  finish: "Finish lesson"
+  follow: "Follow user"
+  unfollow: "Unfollow user"
+  user: 0
+  lesson: 1

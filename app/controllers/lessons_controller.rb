@@ -18,6 +18,8 @@ class LessonsController < ApplicationController
   def update
     @lesson = Lesson.find params[:id]
     if @lesson.update_attributes lesson_params
+       @lesson.count_true = @lesson.results.correct_answer.count
+       @lesson.save
       flash[:success] = t "lesson_update_success"
       render :show_result
     else
